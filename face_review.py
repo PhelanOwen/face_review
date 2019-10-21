@@ -6,11 +6,12 @@ from kivy.app import App
 from kivy.core.window import Window
 import requests, shutil
 from PIL import Image
+import os
 
 Window.size = (500,600)
 
 class thing(App):
-    index = 0
+    index = len(os.listdir('.')) - 1  # current dir also contains .py file 
 
     def reload_img(self):
         headers = {'User-Agent': 'Chrome/41.0.2228.0'}
