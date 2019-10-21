@@ -11,7 +11,7 @@ import os
 Window.size = (500,600)
 
 class thing(App):
-    index = len(os.listdir('.')) - 1  # current dir also contains .py file 
+    index = len([f for f in os.listdir('.') if '.txt' in f])  # current dir also contains .py file 
 
     def reload_img(self):
         headers = {'User-Agent': 'Chrome/41.0.2228.0'}
