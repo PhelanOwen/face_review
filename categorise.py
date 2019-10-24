@@ -21,7 +21,7 @@ for i,f in enumerate(files):
     res = 'r' + f[1:-3] + 'txt'
     score = open(res, 'r').read()
 
-    if i%4 == 0:
+    if i%9 == 0:
         shutil.move(f, 'validation/'+str(score) +'/' + f)
     else:
         shutil.move(f, 'training/'+str(score) +'/' + f)
